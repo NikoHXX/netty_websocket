@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+#netty的配置信息(端口号,webSocket路径)
+webSocket:
+  netty:
+    port: 8000
+    path: /websocket
+    readerIdleTime: 30 #读空闲超时时间设置(Netty心跳检测配置)
+    writerIdleTime: 30 #写空闲超时时间设置(Netty心跳检测配置)
+    allIdleTime: 30 #读写空闲超时时间设置(Netty心跳检测配置)
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+    mode: LEGACYHTML5
